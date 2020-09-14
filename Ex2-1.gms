@@ -26,7 +26,7 @@ $offtext
 
 * 1. DEFINE the SETS
 SETS plnt crops growing /Eggplant, Tomatoes/
-     res resources /Water, Land/;
+     res resources /Water, Land,Labor/;
 
 * 2. DEFINE input data
 PARAMETERS
@@ -35,12 +35,13 @@ PARAMETERS
          Tomatoes 7/
    b(res) Right hand constraint values (per resource)
           /Water 4000000,
+          Labor 17500,
            Land  12000 /;
 
 TABLE A(plnt,res) Left hand side constraint coefficients
-                 Water    Land
- Eggplant        1000      4
- Tomatoes        2000      3 ;
+                 Water    Land Labor
+ Eggplant        1000      4    5
+ Tomatoes        2000      3    2.5;
 
 * 3. DEFINE the variables
 VARIABLES X(plnt) plants planted (Number)
