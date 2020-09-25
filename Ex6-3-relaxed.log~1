@@ -1,0 +1,41 @@
+
+--- Job Ex6-3-relaxed.gms Start 09/24/20 23:30:13 24.2.3 r46072 WEX-WEI x86_64/MS Windows
+GAMS 24.2.3   Copyright (C) 1987-2014 GAMS Development. All rights reserved
+Licensee: Utah Water Research Laboratory (5 user)        G140130:1517AV-GEN
+          Utah State University                                      DC7087
+          License for teaching and research at degree granting institutions
+--- Starting compilation
+--- Ex6-3-relaxed.gms(82) 3 Mb
+--- Starting execution: elapsed 0:00:00.002
+--- Generating LP model WatSupplyRelaxed
+--- Ex6-3-relaxed.gms(75) 4 Mb
+---   10 rows  5 columns  18 non-zeroes
+--- Executing CPLEX: elapsed 0:00:00.014
+
+IBM ILOG CPLEX   24.2.3 r46072 Released May 22, 2014 WEI x86_64/MS Windows    
+Cplex 12.6.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+Tried aggregator 1 time.
+LP Presolve eliminated 8 rows and 3 columns.
+Aggregator did 2 substitutions.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.00 ticks)
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.01 ticks)
+
+Optimal solution found.
+Objective :      305833.333333
+
+--- Restarting execution
+--- Ex6-3-relaxed.gms(75) 2 Mb
+--- Reading solution for model WatSupplyRelaxed
+--- Executing after solve: elapsed 0:00:00.069
+--- Ex6-3-relaxed.gms(82) 3 Mb
+GDX2XLS          24.2.3 r46072 Released May 22, 2014 VS8 x86/MS Windows       
+gdx2xls error: Input file not found: C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2020\CEE6410-Rosenberg-GitHub\CEE-6410-Rosenberg\Lectures\Ex6-3.relaxed.gdx
+*** Status: Normal completion
+--- Job Ex6-3-relaxed.gms Stop 09/24/20 23:30:13 elapsed 0:00:00.099

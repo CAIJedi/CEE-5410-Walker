@@ -1,0 +1,136 @@
+
+--- Job Ex2-1-parametric.gms Start 09/22/20 18:14:43 24.2.3 r46072 WEX-WEI x86_64/MS Windows
+GAMS 24.2.3   Copyright (C) 1987-2014 GAMS Development. All rights reserved
+Licensee: Utah Water Research Laboratory (5 user)        G140130:1517AV-GEN
+          Utah State University                                      DC7087
+          License for teaching and research at degree granting institutions
+--- Starting compilation
+--- Ex2-1-parametric.gms(130) 3 Mb
+--- Starting execution: elapsed 0:00:00.002
+--- Ex2-1-parametric.gms(102) 4 Mb
+--- Generating LP model PLANTING
+--- Ex2-1-parametric.gms(110) 4 Mb
+--- LOOPS runs = r1
+---   4 rows  3 columns  9 non-zeroes
+--- Executing CPLEX: elapsed 0:00:00.017
+
+IBM ILOG CPLEX   24.2.3 r46072 Released May 22, 2014 WEI x86_64/MS Windows    
+Cplex 12.6.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+Tried aggregator 1 time.
+LP Presolve eliminated 1 rows and 1 columns.
+Reduced LP has 3 rows, 2 columns, and 6 nonzeros.
+Presolve time = 0.00 sec. (0.00 ticks)
+
+Iteration      Dual Objective            In Variable           Out Variable
+     1 sI            0.000000            X(Tomatoes)RES_CONSTRAIN(Lab slack
+     2           22333.333333            X(Eggplant)RES_CONSTRAIN(Wat slack
+     3           20000.000000RES_CONSTRAIN(Lab slackRES_CONSTRAIN(Lan slack
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.01 ticks)
+
+Optimal solution found.
+Objective :       20000.000000
+
+--- Restarting execution
+--- Ex2-1-parametric.gms(110) 2 Mb
+--- Reading solution for model PLANTING
+--- Executing after solve: elapsed 0:00:00.088
+--- Ex2-1-parametric.gms(102) 3 Mb
+--- Generating LP model PLANTING
+--- Ex2-1-parametric.gms(110) 3 Mb
+--- LOOPS runs = r2
+---   4 rows  3 columns  9 non-zeroes
+--- Executing CPLEX: elapsed 0:00:00.183
+
+IBM ILOG CPLEX   24.2.3 r46072 Released May 22, 2014 WEI x86_64/MS Windows    
+Cplex 12.6.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+Tried aggregator 1 time.
+LP Presolve eliminated 1 rows and 1 columns.
+Reduced LP has 3 rows, 2 columns, and 6 nonzeros.
+Presolve time = 0.00 sec. (0.00 ticks)
+Using devex.
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.01 ticks)
+
+Optimal solution found.
+Objective :       21333.333333
+
+--- Restarting execution
+--- Ex2-1-parametric.gms(110) 2 Mb
+--- Reading solution for model PLANTING
+--- Executing after solve: elapsed 0:00:00.253
+--- Ex2-1-parametric.gms(102) 3 Mb
+--- Generating LP model PLANTING
+--- Ex2-1-parametric.gms(110) 3 Mb
+--- LOOPS runs = r3
+---   4 rows  3 columns  9 non-zeroes
+--- Executing CPLEX: elapsed 0:00:00.265
+
+IBM ILOG CPLEX   24.2.3 r46072 Released May 22, 2014 WEI x86_64/MS Windows    
+Cplex 12.6.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+Tried aggregator 1 time.
+LP Presolve eliminated 1 rows and 1 columns.
+Reduced LP has 3 rows, 2 columns, and 6 nonzeros.
+Presolve time = 0.00 sec. (0.00 ticks)
+Using devex.
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.01 ticks)
+
+Optimal solution found.
+Objective :       28000.000000
+
+--- Restarting execution
+--- Ex2-1-parametric.gms(110) 2 Mb
+--- Reading solution for model PLANTING
+--- Executing after solve: elapsed 0:00:00.335
+--- Ex2-1-parametric.gms(102) 3 Mb
+--- Generating LP model PLANTING
+--- Ex2-1-parametric.gms(110) 3 Mb
+--- LOOPS runs = r4
+---   4 rows  3 columns  9 non-zeroes
+--- Executing CPLEX: elapsed 0:00:00.348
+
+IBM ILOG CPLEX   24.2.3 r46072 Released May 22, 2014 WEI x86_64/MS Windows    
+Cplex 12.6.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+Tried aggregator 1 time.
+LP Presolve eliminated 2 rows and 1 columns.
+Reduced LP has 2 rows, 2 columns, and 4 nonzeros.
+Presolve time = 0.00 sec. (0.00 ticks)
+
+Iteration      Dual Objective            In Variable           Out Variable
+     1  I            0.000000            X(Tomatoes)RES_CONSTRAIN(Lab slack
+     2           28000.000000RES_CONSTRAIN(Lab slackRES_CONSTRAIN(Lan slack
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.01 ticks)
+
+Optimal solution found.
+Objective :       28000.000000
+
+--- Restarting execution
+--- Ex2-1-parametric.gms(110) 2 Mb
+--- Reading solution for model PLANTING
+--- Executing after solve: elapsed 0:00:00.428
+--- Ex2-1-parametric.gms(130) 3 Mb
+GDX2XLS          24.2.3 r46072 Released May 22, 2014 VS8 x86/MS Windows       
+*** Status: Normal completion
+--- Job Ex2-1-parametric.gms Stop 09/22/20 18:14:47 elapsed 0:00:03.897

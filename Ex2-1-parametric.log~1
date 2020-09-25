@@ -1,0 +1,42 @@
+--- Job Ex2-1-parametric.gms Start 09/23/20 18:21:12 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Ex2-1-parametric.gms
+    PageSize 0
+    ScrDir C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     G200622/0001AP-GEN
+          Utah State University, Utah Water Research Laboratory      DC7087
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- Ex2-1-parametric.gms(58) 3 Mb 1 Error
+*** Error 409 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Ex2-1-parametric.gms
+    Unrecognizable item - skip to find a new statement
+      looking for a ';' or a key word to get started again
+--- Ex2-1-parametric.gms(110) 3 Mb 2 Errors
+*** Error 257 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Ex2-1-parametric.gms
+    Solve statement not checked because of previous errors
+--- Ex2-1-parametric.gms(114) 3 Mb 3 Errors
+*** Error 141 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Ex2-1-parametric.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- Ex2-1-parametric.gms(120) 3 Mb 4 Errors
+*** Error 141 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Ex2-1-parametric.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- Ex2-1-parametric.gms(130) 3 Mb 4 Errors
+*** Status: Compilation error(s)
+--- Job Ex2-1-parametric.gms Stop 09/23/20 18:21:13 elapsed 0:00:00.046

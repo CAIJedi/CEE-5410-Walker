@@ -1,0 +1,359 @@
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 09/25/20 12:52:44 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+      CEE 6410 - Water Resources Systems Analysis
+      Homework 4 Problem 1
+       
+      THE PROBLEM:
+      A reservoir is designed to provide hydropower and water for irrigation.
+      At least one unit of water must be kept in the river  each  month  at  point  A.
+      The  hydropower  turbines  have  a  capacity  of  4  units  of  water  per month (flows are constant during any single month),
+      and any other releases must bypass the turbines.
+      The size of farmed area is very large relative to the amount of irrigation water available,
+       so there is no upper limit on usable irrigation water.
+       The reservoir has a capacity of 9 units, and initial storage  is  5  units  of  water.
+      The  ending  storage  must  be  equal  to  or  greater  than  the  beginning storage.
+       The benefits per unit of water, and the estimated average inflows to the reservoir are given in Table 1.
+  16  *Difine the variables
+  17  SETS flow flows into location /TURB "Turbine",IRR "Irrigation",RES "Reservoir",Spill "Spillway",Aout "Aout"/
+  18       t time (months) /m1,m2,m3,m4,m5,m6/;
+  19  *defining imput data
+  20  PARAMETERS
+  21      hb(t) hydropower benifit coeffencent ($ per unit)
+  22      /m1 1.6,m2 1.7,m3 1.8,m4 1.9,m5 2.0,m6 2.0/
+  23      ib(t) Irrigation benifit coeffecent ($ per unit)
+  24      /m1 1,m2 1.2,m3 1.9,m4 2.0,m5 2.2,m6 2.2/
+  25      inflow(t) inflow units per month
+  26       /m1 2,m2 2,m3 3,m4 4,m5 3,m6 2/;
+  27  SCALARS
+  28      MaxStor Max Storage of reserviour /9/
+  29      InitalStor Inital storage of reservioir /5/
+  30      Maxturbine Maximum flow through turbine /4/
+  31      MinflowA minimum flow required at A /1/;
+  32  VARIABLES
+  33      X(flow,t) types of flows in and out of components
+  34      VPROFIT total profit;
+  35  *make sure all variables stay positive
+  36  Positive Variables X;
+  37  *set up constraints and profit formulation
+  38  Equations
+  39      Profit total profit and objective function value
+  40      Outflow_Constraint(t) minimum flow required to flow out of the system
+  41      Cap_Constraint(t) constraint based on capacity of the reservoir
+  42      Sustain_constraint(t) requiremtny to have sustaiable use of Reservoir
+  43      Turbine_constraint(t) maximum flow through turbine
+  44      Massbalance_Constraint(t) flow in equals flow out
+  45      Inflow1_constraint constrains the inflow and spillway flow of the Reservoir initally
+  46      Inflowallohters_constraint(t) constrains the inflow and spillway flow of the Reservoir in all but the inital case;
+  47  Profit..  VPROFIT =E= SUM(t,hb(t)*X('TURB',t)+ib(t)*X('IRR',t));
+  48  Cap_Constraint(t).. X('RES',t) =L= MaxStor;
+  49  Outflow_Constraint(t).. X('Aout',t)=G= MinflowA;
+  50  Sustain_constraint(t).. X('RES','m6') =G= InitalStor;
+  51  Turbine_constraint(t).. X('TURB',t)=L= MaxTurbine;
+  52  Massbalance_constraint(t).. X('TURB',t)+X('Spill',t) =E= X('IRR',t)+X('Aout',t);
+  53  Inflow1_constraint.. X('RES','m1') =E= InitalStor+inflow('m1')-X('TURB','m1')-X('Spill','m1');
+  54  Inflowallohters_constraint(t)$(ord(t) gt 1)..  X('RES',t) =E= inflow(t)+X('RES',t-1)-X('Spill',t)-X('TURB',t);
+  55  *Deinfing model based on equations
+  56  MODEL RESMODEL /Profit,Cap_Constraint,Outflow_Constraint,Sustain_constraint, Turbine_Constraint,Massbalance_Constraint,Inflow1_constraint,Inflowallohters_constraint/;
+  57  *Solve Model
+  58  Solve RESMODEL Using LP Maximizing VPROFIT;
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  32.2.0 rc62c018 WEX-WEI
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 09/25/20 12:52:44 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE RESMODEL Using LP From line 58
+
+
+---- Profit  =E=  total profit and objective function value
+
+Profit..  - 1.6*X(TURB,m1) - 1.7*X(TURB,m2) - 1.8*X(TURB,m3) - 1.9*X(TURB,m4) - 2*X(TURB,m5) - 2*X(TURB,m6) - X(IRR,m1) - 1.2*X(IRR,m2) - 1.9*X(IRR,m3) - 2*X(IRR,m4) - 2.2*X(IRR,m5) - 2.2*X(IRR,m6) + VPROFIT =E= 0 ; (LHS = 0)
+     
+
+---- Cap_Constraint  =L=  constraint based on capacity of the reservoir
+
+Cap_Constraint(m1)..  X(RES,m1) =L= 9 ; (LHS = 0)
+     
+Cap_Constraint(m2)..  X(RES,m2) =L= 9 ; (LHS = 0)
+     
+Cap_Constraint(m3)..  X(RES,m3) =L= 9 ; (LHS = 0)
+     
+REMAINING 3 ENTRIES SKIPPED
+
+
+---- Outflow_Constraint  =G=  minimum flow required to flow out of the system
+
+Outflow_Constraint(m1)..  X(Aout,m1) =G= 1 ; (LHS = 0, INFES = 1 ****)
+     
+Outflow_Constraint(m2)..  X(Aout,m2) =G= 1 ; (LHS = 0, INFES = 1 ****)
+     
+Outflow_Constraint(m3)..  X(Aout,m3) =G= 1 ; (LHS = 0, INFES = 1 ****)
+     
+REMAINING 3 ENTRIES SKIPPED
+
+
+---- Sustain_constraint  =G=  requiremtny to have sustaiable use of Reservoir
+
+Sustain_constraint(m1)..  X(RES,m6) =G= 5 ; (LHS = 0, INFES = 5 ****)
+     
+Sustain_constraint(m2)..  X(RES,m6) =G= 5 ; (LHS = 0, INFES = 5 ****)
+     
+Sustain_constraint(m3)..  X(RES,m6) =G= 5 ; (LHS = 0, INFES = 5 ****)
+     
+REMAINING 3 ENTRIES SKIPPED
+
+
+---- Turbine_constraint  =L=  maximum flow through turbine
+
+Turbine_constraint(m1)..  X(TURB,m1) =L= 4 ; (LHS = 0)
+     
+Turbine_constraint(m2)..  X(TURB,m2) =L= 4 ; (LHS = 0)
+     
+Turbine_constraint(m3)..  X(TURB,m3) =L= 4 ; (LHS = 0)
+     
+REMAINING 3 ENTRIES SKIPPED
+
+
+---- Massbalance_Constraint  =E=  flow in equals flow out
+
+Massbalance_Constraint(m1)..  X(TURB,m1) - X(IRR,m1) + X(Spill,m1) - X(Aout,m1) =E= 0 ; (LHS = 0)
+     
+Massbalance_Constraint(m2)..  X(TURB,m2) - X(IRR,m2) + X(Spill,m2) - X(Aout,m2) =E= 0 ; (LHS = 0)
+     
+Massbalance_Constraint(m3)..  X(TURB,m3) - X(IRR,m3) + X(Spill,m3) - X(Aout,m3) =E= 0 ; (LHS = 0)
+     
+REMAINING 3 ENTRIES SKIPPED
+
+
+---- Inflow1_constraint  =E=  constrains the inflow and spillway flow of the Reservoir initally
+
+Inflow1_constraint..  X(TURB,m1) + X(RES,m1) + X(Spill,m1) =E= 7 ; (LHS = 0, INFES = 7 ****)
+     
+
+---- Inflowallohters_constraint  =E=  constrains the inflow and spillway flow of the Reservoir in all but the inital case
+
+Inflowallohters_constraint(m2)..  X(TURB,m2) - X(RES,m1) + X(RES,m2) + X(Spill,m2) =E= 2 ; (LHS = 0, INFES = 2 ****)
+     
+Inflowallohters_constraint(m3)..  X(TURB,m3) - X(RES,m2) + X(RES,m3) + X(Spill,m3) =E= 3 ; (LHS = 0, INFES = 3 ****)
+     
+Inflowallohters_constraint(m4)..  X(TURB,m4) - X(RES,m3) + X(RES,m4) + X(Spill,m4) =E= 4 ; (LHS = 0, INFES = 4 ****)
+     
+REMAINING 2 ENTRIES SKIPPED
+
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 09/25/20 12:52:44 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE RESMODEL Using LP From line 58
+
+
+---- X  types of flows in and out of components
+
+X(TURB,m1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1.6     Profit
+        1       Turbine_constraint(m1)
+        1       Massbalance_Constraint(m1)
+        1       Inflow1_constraint
+
+X(TURB,m2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1.7     Profit
+        1       Turbine_constraint(m2)
+        1       Massbalance_Constraint(m2)
+        1       Inflowallohters_constraint(m2)
+
+X(TURB,m3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1.8     Profit
+        1       Turbine_constraint(m3)
+        1       Massbalance_Constraint(m3)
+        1       Inflowallohters_constraint(m3)
+
+REMAINING 27 ENTRIES SKIPPED
+
+---- VPROFIT  total profit
+
+VPROFIT
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       Profit
+
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 09/25/20 12:52:44 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE RESMODEL Using LP From line 58
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           8     SINGLE EQUATIONS           37
+BLOCKS OF VARIABLES           2     SINGLE VARIABLES           31
+NON ZERO ELEMENTS            84
+
+
+GENERATION TIME      =        0.031 SECONDS      4 MB  32.2.0 rc62c018 WEX-WEI
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 09/25/20 12:52:44 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE RESMODEL Using LP From line 58
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   RESMODEL            OBJECTIVE  VPROFIT
+     TYPE    LP                  DIRECTION  MAXIMIZE
+     SOLVER  CPLEX               FROM LINE  58
+
+**** SOLVER STATUS     1 Normal Completion         
+**** MODEL STATUS      1 Optimal                   
+**** OBJECTIVE VALUE               51.6000
+
+ RESOURCE USAGE, LIMIT          0.015 10000000000.000
+ ITERATION COUNT, LIMIT         9    2147483647
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.06 ticks)
+Optimal solution found.
+Objective :          51.600000
+
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU Profit              .              .              .             1.0000      
+
+  Profit  total profit and objective function value
+
+---- EQU Cap_Constraint  constraint based on capacity of the reservoir
+
+          LOWER          LEVEL          UPPER         MARGINAL
+
+m1        -INF            6.0000         9.0000          .          
+m2        -INF            7.0000         9.0000          .          
+m3        -INF            8.0000         9.0000          .          
+m4        -INF            8.0000         9.0000          .          
+m5        -INF            7.0000         9.0000          .          
+m6        -INF            5.0000         9.0000          .          
+
+---- EQU Outflow_Constraint  minimum flow required to flow out of the system
+
+          LOWER          LEVEL          UPPER         MARGINAL
+
+m1         1.0000         1.0000        +INF           -2.1000      
+m2         1.0000         1.0000        +INF           -2.0000      
+m3         1.0000         1.0000        +INF           -1.9000      
+m4         1.0000         1.0000        +INF           -2.0000      
+m5         1.0000         1.0000        +INF           -2.2000      
+m6         1.0000         1.0000        +INF           -2.2000      
+
+---- EQU Sustain_constraint  requiremtny to have sustaiable use of Reservoir
+
+          LOWER          LEVEL          UPPER         MARGINAL
+
+m1         5.0000         5.0000        +INF           -3.7000      
+m2         5.0000         5.0000        +INF             .          
+m3         5.0000         5.0000        +INF             .          
+m4         5.0000         5.0000        +INF             .          
+m5         5.0000         5.0000        +INF             .          
+m6         5.0000         5.0000        +INF             .          
+
+---- EQU Turbine_constraint  maximum flow through turbine
+
+          LOWER          LEVEL          UPPER         MARGINAL
+
+m1        -INF            1.0000         4.0000          .          
+m2        -INF            1.0000         4.0000          .          
+m3        -INF            2.0000         4.0000          .          
+m4        -INF            4.0000         4.0000         0.2000      
+m5        -INF            4.0000         4.0000         0.5000      
+m6        -INF            4.0000         4.0000         0.5000      
+
+---- EQU Massbalance_Constraint  flow in equals flow out
+
+          LOWER          LEVEL          UPPER         MARGINAL
+
+m1          .              .              .            -2.1000      
+m2          .              .              .            -2.0000      
+m3          .              .              .            -1.9000      
+m4          .              .              .            -2.0000      
+m5          .              .              .            -2.2000      
+m6          .              .              .            -2.2000      
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU Inflow1_c~         7.0000         7.0000         7.0000         3.7000      
+
+  Inflow1_constraint  constrains the inflow and spillway flow of the Reservoir initally
+
+---- EQU Inflowallohters_constraint  constrains the inflow and spillway flow of the Reservoir in all but the inital case
+
+          LOWER          LEVEL          UPPER         MARGINAL
+
+m2         2.0000         2.0000         2.0000         3.7000      
+m3         3.0000         3.0000         3.0000         3.7000      
+m4         4.0000         4.0000         4.0000         3.7000      
+m5         3.0000         3.0000         3.0000         3.7000      
+m6         2.0000         2.0000         2.0000         3.7000      
+
+---- VAR X  types of flows in and out of components
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+TURB .m1          .             1.0000        +INF             .          
+TURB .m2          .             1.0000        +INF             .          
+TURB .m3          .             2.0000        +INF             .          
+TURB .m4          .             4.0000        +INF             .          
+TURB .m5          .             4.0000        +INF             .          
+TURB .m6          .             4.0000        +INF             .          
+IRR  .m1          .              .            +INF           -1.1000      
+IRR  .m2          .              .            +INF           -0.8000      
+IRR  .m3          .             1.0000        +INF             .          
+IRR  .m4          .             3.0000        +INF             .          
+IRR  .m5          .             3.0000        +INF             .          
+IRR  .m6          .             3.0000        +INF             .          
+RES  .m1          .             6.0000        +INF             .          
+RES  .m2          .             7.0000        +INF             .          
+RES  .m3          .             8.0000        +INF             .          
+RES  .m4          .             8.0000        +INF             .          
+RES  .m5          .             7.0000        +INF             .          
+RES  .m6          .             5.0000        +INF             .          
+Spill.m1          .              .            +INF           -1.6000      
+Spill.m2          .              .            +INF           -1.7000      
+Spill.m3          .              .            +INF           -1.8000      
+Spill.m4          .              .            +INF           -1.7000      
+Spill.m5          .              .            +INF           -1.5000      
+Spill.m6          .              .            +INF           -1.5000      
+Aout .m1          .             1.0000        +INF             .          
+Aout .m2          .             1.0000        +INF             .          
+Aout .m3          .             1.0000        +INF             .          
+Aout .m4          .             1.0000        +INF             .          
+Aout .m5          .             1.0000        +INF             .          
+Aout .m6          .             1.0000        +INF             .          
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- VAR VPROFIT           -INF           51.6000        +INF             .          
+
+  VPROFIT  total profit
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+
+
+EXECUTION TIME       =        0.094 SECONDS      4 MB  32.2.0 rc62c018 WEX-WEI
+
+
+USER: Small MUD - 5 User License                     G200622/0001AP-GEN
+      Utah State University, Utah Water Research Laboratory      DC7087
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Resivour Hw 4.gms
+Output     C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Resivour Hw 4.lst

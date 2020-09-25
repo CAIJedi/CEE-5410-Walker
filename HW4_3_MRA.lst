@@ -1,0 +1,110 @@
+GAMS 24.2.3  r46072 Released May 22, 2014 WEX-WEI x86_64/MS Windows 09/23/20 10:32:10 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+      Details about the problem [constraints, objective function, decision varia
+      bles etc.]
+      Creator of the script
+      Date of creation
+   6   
+   7  *Define Sets
+   8  SETS l all the points on the schemetic diagram /res "Reservoir", hyd "Hydr
+      opower", irr "Irrigation", spi "Spill", AAA "A"/
+   9       t all timesteps in months /month1*month6/;
+  10   
+  11  *Define input data
+  12   
+  13   
+  14  PARAMETERS
+  15      inflow(t) reservoir inflow (unit volume)
+  16          /month1 2, month2 2, month3 3, month4 4, month5 3, month6 2/
+  17      hb(t) reservoir benefit from hydro power($ per unit of water)
+  18          /month1 1.6, month2 1.7, month3 1.8, month4 1.9, month5 2.0, month
+      6 2.0/
+  19      ib(t) reservoir benefit from irrigation
+  20         /month1 1.0, month2 1.2, month3 1.9, month4 2.0, month5 2.2, month6
+       2.2/;
+  21   
+  22  SCALARS
+  23      MaxStorage  Maximum Reservoir Storage (volume) /9/
+  24      InStorage   Initial Storage of Reservoir (volume) /5/
+  25      FlowReqA    Flow Requirment at point A /1/
+  26      TurbCapacity Monthly maximum capacity /4/;
+  27   
+  28  VARIABLES
+  29      X(l,t)   Basically the amount of water unit at t timestep (volume)
+  30      TOTALBEN Total Benefit ($);
+  31   
+  32  POSITIVE VARIABLES X
+  33   
+  34  EQUATIONS
+  35   
+  36   PROFIT Total collective profit generated from six months opertation
+  37   RES_Storage_Con(l,t) Reservoir has a capacity
+  38   Sustain_Con(l,t) Final Reservoir Storage must be greater than or equal to
+       initial one
+  39   OutFlow_at_A_Con(l,t) Outflow at point A be 1 or greater
+  40   Turbine_Con(l,t) The turbine's montly maximum is 4
+  41   MassBalance_at_B_Con(l,t) The mass balance at an imaginary point B just a
+      fter the irrigation diversion
+  42   MassBalance_at_Res_Con(t) The mass balance at the reservoir
+  43   MassBalance_at_Res_ini_Con(t) The initial mass balance at the reservoir;
+  44   
+  45  PROFIT..                          TOTALBEN=E=SUM((l,t),hb(t)*X("Hyd",t)+ib
+      (t)*X("Irr",t));
+  46  RES_Storage_Con(l,t)..            X("Res",t)=L= MaxStorage;
+  47  Sustain_Con(l,t)..                X("Reservoir","month6") =G=InStorage;
+****                                                $170
+  48  OutFlow_at_A_Con(l,t)..           X("A",t)=G=FlowReqA;
+****                                        $170
+  49  Turbine_Con(l,t)..                X("Hydropower",t)=L= TurbCapacity;
+****                                                 $170
+  50  MassBalance_at_B_Con(l,t)..       X("Spill",t)+X("Hydropower",t)=E=X("Irri
+****                                            $170              $170          
+      gation",t)+X("A",t);
+            $170     $170
+  51  MassBalance_at_Res_ini_Con(t)..   X("Reservoir","month1")=E=InStorage+ inf
+****                                                $170                        
+      low("month1")-X("Spill","month1")-X("Hydropower","month1");
+                            $170                     $170
+  52  MassBalance_at_Res_Con(t)$(ord(t) ge 2)..     X("Reservoir",t)=E= X("Reser
+****                                                            $170            
+      voir",t-1)+inflow(t)-X("Spill",t)-X("Hydropower",t);
+          $170                     $170              $170
+  53   
+  54  * Defining the model
+  55  MODEL ADJUSTINGBTN /PROFIT,RES_Storage_Con,Sustain_Con,OutFlow_at_A_Con,Tu
+      rbine_Con,MassBalance_at_B_Con,MassBalance_at_Res_ini_Con,MassBalance_at_R
+      es_Con/;
+  56   
+  57  * Solving model
+  58  SOLVE ADJUSTINGBTN USING LP MAXIMIZING TOTALBEN;
+****                                                 $257
+GAMS 24.2.3  r46072 Released May 22, 2014 WEX-WEI x86_64/MS Windows 09/23/20 10:32:10 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Error Messages
+
+
+170  Domain violation for element
+257  Solve statement not checked because of previous errors
+
+**** 15 ERROR(S)   0 WARNING(S)
+
+
+COMPILATION TIME     =        0.062 SECONDS      3 MB  24.2.3 r46072 WEX-WEI
+
+
+USER: Utah Water Research Laboratory (5 user)        G140130:1517AV-GEN
+      Utah State University                                      DC7087
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2020\StudentWork\CodeAttemp
+           ts\HW4_3_MRA.gms
+Output     C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2020\CEE6410-Rosenberg-GitH
+           ub\CEE-6410-Rosenberg\Lectures\HW4_3_MRA.lst
+
+**** USER ERROR(S) ENCOUNTERED

@@ -1,0 +1,178 @@
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 09/20/20 16:55:10 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1   
+   2   
+   3  *Defining the sets
+   4  SETS
+   5  plnt types of plant to grow /Hay, Grain/
+   6  res resources constrained /Land,Jw "June",Jlw "July", Auw "August"  /;
+   7  PARAMETERS
+   8  p(plnt) Benifit per plant planted ($)
+   9   / Hay 100, Grain 120/
+  10  c(res) right hand constraint values (per resource)
+  11  / Land 10000, Jw 14000, Jlw 18000, Auw 6000/;
+  12   
+  13  Table A(plnt,res) lefthand constraint cooeficents
+  14        Land  Jw   Jlw    Auw
+  15   Hay   1     2     1     1
+  16   Grain 1     1     2     0 ;
+  17  Variables
+  18  X(plnt) number of each plant
+  19  Vprofit total benifit of planting;
+  20  Positive Variables X;
+  21  Equations
+  22  Profit total profit ($) and objective function value
+  23  Res_Constraint(res) Resource constraints;
+  24   
+  25   
+  26  Profit.. Vprofit =E= Sum(plnt,X(plnt)*p(plnt));
+  27  Res_Constraint(res).. Sum(plnt,A(plnt,res)*X(plnt)) =L= c(res);
+  28   
+  29  MODEL Planting /Profit,Res_Constraint/;
+  30   
+  31  SOLVE PLANTING USING LP MAXIMIZING VPROFIT;
+  32   
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  32.2.0 rc62c018 WEX-WEI
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 09/20/20 16:55:10 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE Planting Using LP From line 31
+
+
+---- Profit  =E=  total profit ($) and objective function value
+
+Profit..  - 100*X(Hay) - 120*X(Grain) + Vprofit =E= 0 ; (LHS = 0)
+     
+
+---- Res_Constraint  =L=  Resource constraints
+
+Res_Constraint(Land)..  X(Hay) + X(Grain) =L= 10000 ; (LHS = 0)
+     
+Res_Constraint(Jw)..  2*X(Hay) + X(Grain) =L= 14000 ; (LHS = 0)
+     
+Res_Constraint(Jlw)..  X(Hay) + 2*X(Grain) =L= 18000 ; (LHS = 0)
+     
+REMAINING ENTRY SKIPPED
+
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 09/20/20 16:55:10 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE Planting Using LP From line 31
+
+
+---- X  number of each plant
+
+X(Hay)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+     -100       Profit
+        1       Res_Constraint(Land)
+        2       Res_Constraint(Jw)
+        1       Res_Constraint(Jlw)
+        1       Res_Constraint(Auw)
+
+X(Grain)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+     -120       Profit
+        1       Res_Constraint(Land)
+        1       Res_Constraint(Jw)
+        2       Res_Constraint(Jlw)
+
+
+---- Vprofit  total benifit of planting
+
+Vprofit
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       Profit
+
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 09/20/20 16:55:10 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE Planting Using LP From line 31
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           2     SINGLE EQUATIONS            5
+BLOCKS OF VARIABLES           2     SINGLE VARIABLES            3
+NON ZERO ELEMENTS            10
+
+
+GENERATION TIME      =        0.046 SECONDS      4 MB  32.2.0 rc62c018 WEX-WEI
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 09/20/20 16:55:10 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE Planting Using LP From line 31
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   Planting            OBJECTIVE  Vprofit
+     TYPE    LP                  DIRECTION  MAXIMIZE
+     SOLVER  CPLEX               FROM LINE  31
+
+**** SOLVER STATUS     1 Normal Completion         
+**** MODEL STATUS      1 Optimal                   
+**** OBJECTIVE VALUE          1160000.0000
+
+ RESOURCE USAGE, LIMIT          0.016 10000000000.000
+ ITERATION COUNT, LIMIT         3    2147483647
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.01 ticks)
+Optimal solution found.
+Objective :     1160000.000000
+
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU Profit              .              .              .             1.0000      
+
+  Profit  total profit ($) and objective function value
+
+---- EQU Res_Constraint  Resource constraints
+
+            LOWER          LEVEL          UPPER         MARGINAL
+
+Land        -INF        10000.0000     10000.0000        80.0000      
+Jw          -INF        12000.0000     14000.0000          .          
+Jlw         -INF        18000.0000     18000.0000        20.0000      
+Auw         -INF         2000.0000      6000.0000          .          
+
+---- VAR X  number of each plant
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+Hay            .          2000.0000        +INF             .          
+Grain          .          8000.0000        +INF             .          
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- VAR Vprofit           -INF      1160000.0000        +INF             .          
+
+  Vprofit  total benifit of planting
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+
+
+EXECUTION TIME       =        0.140 SECONDS      4 MB  32.2.0 rc62c018 WEX-WEI
+
+
+USER: Small MUD - 5 User License                     G200622/0001AP-GEN
+      Utah State University, Utah Water Research Laboratory      DC7087
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Hw#3 gams.gms
+Output     C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Hw#3 gams.lst

@@ -1,0 +1,35 @@
+--- Job Hw#3 gams.gms Start 09/20/20 16:49:17 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input "C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Hw#3 gams.gms"
+    PageSize 0
+    ScrDir C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     G200622/0001AP-GEN
+          Utah State University, Utah Water Research Laboratory      DC7087
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- Hw#3 gams.gms(27) 3 Mb 4 Errors
+*** Error 120 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Hw#3 gams.gms
+    Unknown identifier entered as set
+*** Error 340 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Hw#3 gams.gms
+    A label/element with the same name exist. You may have forgotten
+       to quote a label/element reference. For example,
+       set i / a,b,c /; parameter x(i); x('a') = 10;
+*** Error 149 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Hw#3 gams.gms
+    Uncontrolled set entered as constant
+*** Error 171 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Hw#3 gams.gms
+    Domain violation for set
+--- Hw#3 gams.gms(31) 3 Mb 5 Errors
+*** Error 257 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Hw#3 gams.gms
+    Solve statement not checked because of previous errors
+--- Hw#3 gams.gms(32) 3 Mb 5 Errors
+*** Status: Compilation error(s)
+--- Job Hw#3 gams.gms Stop 09/20/20 16:49:18 elapsed 0:00:00.060

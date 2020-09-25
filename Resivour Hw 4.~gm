@@ -19,9 +19,9 @@ SETS flow flows into location /TURB "Turbine",IRR "Irrigation",RES "Reservoir",S
 *defining imput data
 PARAMETERS
     hb(t) hydropower benifit coeffencent ($ per unit)
-    /m1 1.6,m2 1.7,m3 1.8,m4 1.9,m5 2.0,m6 2.0/
+    /m1 1.6,m2 1.8,m3 1.8,m4 1.9,m5 2.0,m6 2.0/
     ib(t) Irrigation benifit coeffecent ($ per unit)
-    /m1 1,m2 1.2,m3 1.9,m4 2.0,m5 2.2,m6 2.2/
+    /m1 1.6,m2 1.8,m3 1.8,m4 1.9,m5 2.0,m6 2.0/
     inflow(t) inflow units per month
      /m1 2,m2 2,m3 3,m4 4,m5 3,m6 2/;
 SCALARS
@@ -50,8 +50,8 @@ Outflow_Constraint(t).. X('Aout',t)=G= MinflowA;
 Sustain_constraint(t).. X('RES','m6') =G= InitalStor;
 Turbine_constraint(t).. X('TURB',t)=L= MaxTurbine;
 Massbalance_constraint(t).. X('TURB',t)+X('Spill',t) =E= X('IRR',t)+X('Aout',t);
-Inflow1_constraint.. X('RES','m1') =E= InitalStor+inflow('m1')-X('TURB','m1')-X('Spill','m1');
-Inflowallohters_constraint(t)$(ord(t) gt 1)..  X('RES',t) =E= inflow(t)+X('RES',t-1)-X('Spill',t)-X('TURB',t);
+Inflow1_constraint.. X('RES','m1') =E= InitalStor+inflow('m1')+X('TURB','m1')-X('Spill','m1');
+Inflowallohters_constraint(t)..  X('RES',t) =E= inflow(t)+X('RES',t-1)-X('Spill',t)-X('TURB',t);
 *Deinfing model based on equations
 MODEL RESMODEL /Profit,Cap_Constraint,Outflow_Constraint,Sustain_constraint, Turbine_Constraint,Massbalance_Constraint,Inflow1_constraint,Inflowallohters_constraint/;
 *Solve Model
