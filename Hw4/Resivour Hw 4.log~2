@@ -1,4 +1,4 @@
---- Job Resivour Hw 4.gms Start 09/25/20 12:49:33 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Job Resivour Hw 4.gms Start 09/25/20 13:21:41 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\32\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -16,12 +16,12 @@ Licensee: Small MUD - 5 User License                     G200622/0001AP-GEN
           Utah State University, Utah Water Research Laboratory      DC7087
           C:\GAMS\32\gamslice.txt
 --- Starting compilation
---- Resivour Hw 4.gms(58) 3 Mb
---- Starting execution: elapsed 0:00:00.009
+--- Resivour Hw 4.gms(62) 3 Mb
+--- Starting execution: elapsed 0:00:00.010
 --- Generating LP model RESMODEL
---- Resivour Hw 4.gms(58) 4 Mb
+--- Resivour Hw 4.gms(62) 4 Mb
 ---   37 rows  31 columns  84 non-zeroes
---- Executing CPLEX (Solvelink=2): elapsed 0:00:00.037
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:00.034
 
 IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 --- GAMS/Cplex Link licensed for continuous and discrete problems.
@@ -43,13 +43,13 @@ Initializing dual steep norms . . .
 
 Iteration log . . .
 Iteration:     1   Dual infeasibility =             0.000000
-Iteration:     2   Dual objective     =            62.800000
+Iteration:     2   Dual objective     =            62.400000
 LP status(1): optimal
 Cplex Time: 0.00sec (det. 0.06 ticks)
 
 Optimal solution found.
-Objective :          51.700000
+Objective :          51.600000
 
 --- Reading solution for model RESMODEL
 *** Status: Normal completion
---- Job Resivour Hw 4.gms Stop 09/25/20 12:49:33 elapsed 0:00:00.107
+--- Job Resivour Hw 4.gms Stop 09/25/20 13:21:41 elapsed 0:00:00.092

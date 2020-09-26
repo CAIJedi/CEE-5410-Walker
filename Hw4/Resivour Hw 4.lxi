@@ -1,0 +1,25 @@
+B 3 C o m p i l a t i o n
+B 67 Equation Listing    SOLVE RESMODEL Using LP From line 58
+D 70 Profit
+D 75 Cap_Constraint
+D 86 Outflow_Constraint
+D 97 Sustain_constraint
+D 108 Turbine_constraint
+D 119 Massbalance_Constraint
+D 130 Inflow1_constraint
+D 135 Inflowallohters_constraint
+B 147 Column Listing      SOLVE RESMODEL Using LP From line 58
+E 150 X
+E 175 VPROFIT
+B 183 Model Statistics    SOLVE RESMODEL Using LP From line 58
+B 196 Solution Report     SOLVE RESMODEL Using LP From line 58
+F 226 Profit
+F 230 Cap_Constraint
+F 241 Outflow_Constraint
+F 252 Sustain_constraint
+F 263 Turbine_constraint
+F 274 Massbalance_Constraint
+F 287 Inflow1_constraint
+F 291 Inflowallohters_constraint
+G 301 X
+G 338 VPROFIT

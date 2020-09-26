@@ -1,0 +1,47 @@
+--- Job Resivour Hw 4.gms Start 09/25/20 13:25:50 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input "C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Resivour Hw 4.gms"
+    PageSize 0
+    ScrDir C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     G200622/0001AP-GEN
+          Utah State University, Utah Water Research Laboratory      DC7087
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- Resivour Hw 4.gms(47) 3 Mb 7 Errors
+*** Error  96 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Resivour Hw 4.gms
+    Blank needed between identifier and text
+      (-or- illegal character in identifier)
+      (-or- check for missing ';' on previous line)
+*** Error 195 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Resivour Hw 4.gms
+    Symbol redefined with a different type
+*** Error  96 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Resivour Hw 4.gms
+    Blank needed between identifier and text
+      (-or- illegal character in identifier)
+      (-or- check for missing ';' on previous line)
+*** Error 195 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Resivour Hw 4.gms
+    Symbol redefined with a different type
+*** Error  96 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Resivour Hw 4.gms
+    Blank needed between identifier and text
+      (-or- illegal character in identifier)
+      (-or- check for missing ';' on previous line)
+*** Error 195 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Resivour Hw 4.gms
+    Symbol redefined with a different type
+*** Error  96 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Resivour Hw 4.gms
+    Blank needed between identifier and text
+      (-or- illegal character in identifier)
+      (-or- check for missing ';' on previous line)
+--- Resivour Hw 4.gms(58) 3 Mb 8 Errors
+*** Error 257 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Resivour Hw 4.gms
+    Solve statement not checked because of previous errors
+--- Resivour Hw 4.gms(58) 3 Mb 8 Errors
+*** Status: Compilation error(s)
+--- Job Resivour Hw 4.gms Stop 09/25/20 13:25:50 elapsed 0:00:00.023

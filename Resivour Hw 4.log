@@ -1,4 +1,4 @@
---- Job Resivour Hw 4.gms Start 09/25/20 12:52:44 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Job Resivour Hw 4.gms Start 09/25/20 14:03:56 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\32\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -17,11 +17,11 @@ Licensee: Small MUD - 5 User License                     G200622/0001AP-GEN
           C:\GAMS\32\gamslice.txt
 --- Starting compilation
 --- Resivour Hw 4.gms(58) 3 Mb
---- Starting execution: elapsed 0:00:00.010
+--- Starting execution: elapsed 0:00:00.027
 --- Generating LP model RESMODEL
 --- Resivour Hw 4.gms(58) 4 Mb
 ---   37 rows  31 columns  84 non-zeroes
---- Executing CPLEX (Solvelink=2): elapsed 0:00:00.042
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:00.087
 
 IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 --- GAMS/Cplex Link licensed for continuous and discrete problems.
@@ -52,4 +52,4 @@ Objective :          51.600000
 
 --- Reading solution for model RESMODEL
 *** Status: Normal completion
---- Job Resivour Hw 4.gms Stop 09/25/20 12:52:44 elapsed 0:00:00.112
+--- Job Resivour Hw 4.gms Stop 09/25/20 14:03:57 elapsed 0:00:00.267

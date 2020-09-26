@@ -23,9 +23,7 @@ PARAMETERS
     ib(t) Irrigation benifit coeffecent ($ per unit)
     /m1 1,m2 1.2,m3 1.9,m4 2.0,m5 2.2,m6 2.2/
     inflow(t) inflow units per month
-     /m1 2,m2 2,m3 3,m4 4,m5 3,m6 2/
-     MinIRRflow(t) minimum flow to Irrgation in specific months
-     / m1 1, m2 1, m3 2/;
+     /m1 2,m2 2,m3 3,m4 4,m5 3,m6 2/;
 SCALARS
     MaxStor Max Storage of reserviour /9/
     InitalStor Inital storage of reservioir /5/
@@ -45,8 +43,7 @@ Equations
     Turbine_constraint(t) maximum flow through turbine
     Massbalance_Constraint(t) flow in equals flow out
     Inflow1_constraint constrains the inflow and spillway flow of the Reservoir initally
-    Inflowallohters_constraint(t) constrains the inflow and spillway flow of the Reservoir in all but the inital case
-    Minimum_Irr_flowm(t) makes the flow to irr in months higher ;
+    Inflowallohters_constraint(t) constrains the inflow and spillway flow of the Reservoir in all but the inital case;
 Profit..  VPROFIT =E= SUM(t,hb(t)*X('TURB',t)+ib(t)*X('IRR',t));
 Cap_Constraint(t).. X('RES',t) =L= MaxStor;
 Outflow_Constraint(t).. X('Aout',t)=G= MinflowA;
@@ -55,7 +52,6 @@ Turbine_constraint(t).. X('TURB',t)=L= MaxTurbine;
 Massbalance_constraint(t).. X('TURB',t)+X('Spill',t) =E= X('IRR',t)+X('Aout',t);
 Inflow1_constraint.. X('RES','m1') =E= InitalStor+inflow('m1')-X('TURB','m1')-X('Spill','m1');
 Inflowallohters_constraint(t)$(ord(t) gt 1)..  X('RES',t) =E= inflow(t)+X('RES',t-1)-X('Spill',t)-X('TURB',t);
-Minimum_Irr_flowm(t).. X('RES',t) =G= MinIRRFlow(t); 
 *Deinfing model based on equations
 MODEL RESMODEL /Profit,Cap_Constraint,Outflow_Constraint,Sustain_constraint, Turbine_Constraint,Massbalance_Constraint,Inflow1_constraint,Inflowallohters_constraint/;
 *Solve Model
