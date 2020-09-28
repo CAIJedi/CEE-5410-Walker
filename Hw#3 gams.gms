@@ -1,7 +1,7 @@
 $ontext
 Chapter 2,Problem 3, Bishop et al. Solution
 Andrew Walker CEE 5410 Utah State University Fall 2020
-09/20/20
+09/28/20
 $offtext
 
 *Defining the sets
@@ -22,17 +22,36 @@ Table A(plnt,res) lefthand constraint cooeficents
 * Selecting Variables
 Variables
 X(plnt) number of each plant
-Vprofit total benifit of planting;
+Vprofit total benifit of planting
+Y(res) value of resources used (varies with plants)
+VREDCOST total reduced cost ($);
 Positive Variables X;
 Equations
-Profit total profit ($) and objective function value
-Res_Constraint(res) Resource constraints;
+Profit_Primal total profit ($) and objective function value
+Res_Constraint_primal(res) Resource constraints
+REDCOST_DUAL Reduced Cost ($) associated with using resources
+RES_CONS_DUAL(plnt) Profit levels ;
 
+*Primal Equations
+Profit_Primal.. Vprofit =E= Sum(plnt,X(plnt)*p(plnt));
+Res_Constraint_Primal(res).. Sum(plnt,A(plnt,res)*X(plnt)) =L= c(res);
+*Dual Equations
+REDCOST_DUAL..                 VREDCOST =E= SUM(res,c(res)*Y(res));
+RES_CONS_DUAL(plnt)..          sum(res,A(plnt,res)*Y(res)) =G= p(plnt);
 
-Profit.. Vprofit =E= Sum(plnt,X(plnt)*p(plnt));
-Res_Constraint(res).. Sum(plnt,A(plnt,res)*X(plnt)) =L= c(res);
+MODEL PLANT_PRIMAL /Profit_Primal, Res_Constraint_Primal/;
+*Set the options file to print out range of basis information
+PLANT_PRIMAL.optfile = 1;
 
-MODEL Planting /Profit,Res_Constraint/;
+*DUAL model
+MODEL PLANT_DUAL /REDCOST_DUAL, RES_CONS_DUAL/;
 
-SOLVE PLANTING USING LP MAXIMIZING VPROFIT;
-    
+SOLVE PLANT_PRIMAL USING LP MAXIMIZING VPROFIT;
+
+* Solve the PLANTING DUAL model using a Linear Programming Solver (see File=>Options=>Solvers)
+*     to maximize VPROFIT
+SOLVE PLANT_DUAL USING LP MINIMIZING VREDCOST;
+
+Execute_Unload "HW3_Dual.gdx";
+* Dump the gdx file to an Excel workbook
+Execute "gdx2xls HW3_Dual.gdx"  

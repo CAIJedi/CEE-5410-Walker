@@ -1,13 +1,26 @@
 B 3 C o m p i l a t i o n
-B 43 Equation Listing    SOLVE Planting Using LP From line 31
-D 46 Profit
-D 51 Res_Constraint
-B 63 Column Listing      SOLVE Planting Using LP From line 31
-E 66 X
-E 84 Vprofit
-B 92 Model Statistics    SOLVE Planting Using LP From line 31
-B 105 Solution Report     SOLVE Planting Using LP From line 31
-F 135 Profit
-F 139 Res_Constraint
-G 148 X
-G 157 Vprofit
+B 66 Equation Listing    SOLVE PLANT_PRIMAL Using LP From line 49
+D 69 Profit_Primal
+D 74 Res_Constraint_primal
+B 86 Column Listing      SOLVE PLANT_PRIMAL Using LP From line 49
+E 89 X
+E 107 Vprofit
+B 115 Model Statistics    SOLVE PLANT_PRIMAL Using LP From line 49
+B 128 Solution Report     SOLVE PLANT_PRIMAL Using LP From line 49
+F 180 Profit_Primal
+F 184 Res_Constraint_primal
+G 193 X
+G 202 Vprofit
+B 212 Equation Listing    SOLVE PLANT_DUAL Using LP From line 53
+D 215 REDCOST_DUAL
+D 220 RES_CONS_DUAL
+B 228 Column Listing      SOLVE PLANT_DUAL Using LP From line 53
+E 231 Y
+E 253 VREDCOST
+B 261 Model Statistics    SOLVE PLANT_DUAL Using LP From line 53
+B 274 Solution Report     SOLVE PLANT_DUAL Using LP From line 53
+F 309 REDCOST_DUAL
+F 313 RES_CONS_DUAL
+G 320 Y
+G 331 VREDCOST
+B 341 E x e c u t i o n

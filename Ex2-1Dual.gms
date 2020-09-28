@@ -71,6 +71,9 @@ RES_CONS_DUAL(plnt)..          sum(res,A(plnt,res)*Y(res)) =G= c(plnt);
 * 5. DEFINE the MODELS
 *PRIMAL model
 MODEL PLANT_PRIMAL /PROFIT_PRIMAL, RES_CONS_PRIMAL/;
+*Set the options file to print out range of basis information
+PLANT_PRIMAL.optfile = 1;
+
 *DUAL model
 MODEL PLANT_DUAL /REDCOST_DUAL, RES_CONS_DUAL/;
 
