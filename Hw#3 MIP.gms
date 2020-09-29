@@ -72,6 +72,6 @@ SOLVE WatSupplyRelaxed USING MIP MINIMIZING TCOST;
 DISPLAY X.L, I.L, TCOST.L;
 
 * Dump all input data and results to a GAMS gdx file
-Execute_Unload "Ex6-3-integer.gdx";
+Execute_Unload "MIP.gdx";
 * Dump the gdx file to an Excel workbook
-Execute "gdx2xls Ex6-3-integer.gdx"
+Execute "gdx2xls MIP.gdx"
