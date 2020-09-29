@@ -1,4 +1,4 @@
---- Job Ex6-3-integer.gms Start 09/28/20 16:59:39 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Job Ex6-3-integer.gms Start 09/26/20 14:23:39 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\32\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -16,13 +16,13 @@ Licensee: Small MUD - 5 User License                     G200622/0001AP-GEN
           Utah State University, Utah Water Research Laboratory      DC7087
           C:\GAMS\32\gamslice.txt
 --- Starting compilation
---- Ex6-3-integer.gms(76) 3 Mb
---- Starting execution: elapsed 0:00:00.012
+--- Ex6-3-integer.gms(80) 3 Mb
+--- Starting execution: elapsed 0:00:00.032
 --- Generating MIP model WatSupplyRelaxed
---- Ex6-3-integer.gms(69) 4 Mb
----   10 rows  5 columns  17 non-zeroes
+--- Ex6-3-integer.gms(73) 4 Mb
+---   10 rows  5 columns  18 non-zeroes
 ---   2 discrete-columns
---- Executing CPLEX (Solvelink=2): elapsed 0:00:00.035
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:00.080
 
 IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 --- GAMS/Cplex Link licensed for continuous and discrete problems.
@@ -75,19 +75,17 @@ Root relaxation solution time = 0.00 sec. (0.00 ticks)
    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
 
 *     0+    0                       330000.0000   240000.0000            27.27%
-Found incumbent of value 330000.000000 after 0.02 sec. (0.03 ticks)
-*     0     0      integral     0   300000.0000   300000.0000        0    0.00%
-Elapsed time = 0.02 sec. (0.03 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value 300000.000000 after 0.02 sec. (0.03 ticks)
+Found incumbent of value 330000.000000 after 0.01 sec. (0.03 ticks)
+      0     0        cutoff         330000.0000                      0    0.00%
 
 Root node processing (before b&c):
-  Real time             =    0.02 sec. (0.03 ticks)
+  Real time             =    0.01 sec. (0.03 ticks)
 Sequential b&c:
   Real time             =    0.00 sec. (0.00 ticks)
                           ------------
-Total (root+branch&cut) =    0.02 sec. (0.03 ticks)
+Total (root+branch&cut) =    0.01 sec. (0.03 ticks)
 MIP status(101): integer optimal solution
-Cplex Time: 0.02sec (det. 0.03 ticks)
+Cplex Time: 0.01sec (det. 0.03 ticks)
 Fixing integer variables, and solving final LP...
 Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
 CPXPARAM_Advance                                 2
@@ -106,21 +104,20 @@ Cplex Time: 0.00sec (det. 0.01 ticks)
 
 Proven optimal solution.
 
-MIP Solution:       300000.000000    (0 iterations, 0 nodes)
-Final Solve:        300000.000000    (0 iterations)
+MIP Solution:       330000.000000    (0 iterations, 0 nodes)
+Final Solve:        330000.000000    (0 iterations)
 
-Best possible:      300000.000000
+Best possible:      330000.000000
 Absolute gap:            0.000000
 Relative gap:            0.000000
 
 --- Reading solution for model WatSupplyRelaxed
---- Executing after solve: elapsed 0:00:00.103
---- Ex6-3-integer.gms(74) 4 Mb
+--- Executing after solve: elapsed 0:00:00.265
+--- Ex6-3-integer.gms(78) 4 Mb
 --- GDX File C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Ex6-3-integer.gdx
---- Ex6-3-integer.gms(76) 4 Mb
+--- Ex6-3-integer.gms(80) 4 Mb
 GDX2XLS          32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 Output file: C:\Users\oboem\Documents\GitHub\CEE
 Output file: C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Ex6-3-integer.xlsx
-(Created backup file)
 *** Status: Normal completion
---- Job Ex6-3-integer.gms Stop 09/28/20 16:59:41 elapsed 0:00:01.671
+--- Job Ex6-3-integer.gms Stop 09/26/20 14:23:42 elapsed 0:00:02.440
