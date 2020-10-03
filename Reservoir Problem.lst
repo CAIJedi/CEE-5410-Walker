@@ -1,0 +1,112 @@
+GAMS 24.2.3  r46072 Released May 22, 2014 WEX-WEI x86_64/MS Windows 09/29/20 19:15:51 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1  Sets t month /m1*m6/
+   2      l network locations /res "Reservoir", hdpr "Hydropower", irr "Irrigati
+      on", spill "Spill", At_a "at a" /;
+   3   
+   4   
+   5  Parameters inflow(t) res inflow (vol)
+   6      /m1 2, m2 2, m3 3, m4 4, m5 3, m6 2/
+   7      hbpr(t) Hydropower ben. ($ per unit)
+   8      /m1 1.6, m2 1.7, m3 1.8, m4 1.9, m5 2.0, m6 2.0/
+   9      Irrb(t) Irrigation ben ($ per unit)
+  10      /m1 1, m2 1.2, m3 1.9, m4 2.0, m5 2.2, m6 2.2/;
+  11   
+  12  Table
+  13      Ben (l,t) ben for diffreent location
+  14          m1  m2  m3  m4  m5  m6
+  15  hdpr  1.6 1.7 1.8 1.9 2.0 2.0
+  16  irr     1  1.2 1.9 2.0 2.2 2.2 ;
+  17   
+  18   
+  19  Scalars
+  20   
+  21  Hydropower Capacity (volume) /4/
+  22  Maxstor Max res storage (vol) /9/
+  23  initial Storage Res (vol) /5/
+  24  flow req. minimum flow at A (vol) /1/;
+  25   
+  26   
+  27  Variables
+  28      x(l,t) Diff types of flow or storage in the network at the location 1 
+      at time t
+  29      totalBen Total Benefits ($);
+  30   
+  31  Positive Variables x;
+  32  Equations
+  33  Profit Total Profit ($) and objective function value
+  34  lFlow_Const (l,t) Flow Constraints that must be less than or equal to (vol
+      )
+  35  gFlow_Const (l,t) Flow constraints that must be greater than or equal to (
+      Vol)
+  36  intresMB intial Reservoir Mass balance (Vol)
+  37  ResMB(t) Reservoir mass balance for time steps greath than month 1
+  38  RiverMB(l,t) River mass balance for all time steps
+  39  Sustained The Final Reservoir storage is not less than the intial storage;
+  40   
+  41   Profit.. totalBen =E= sum( (l,t), x(l,t)*x(l,t));
+  42   lFlow_Const(l,t).. x(l,t) =L= Ben(l,t);
+  43   gFlow_Const(l,t).. x(l,t) =G= Ben(l,t);
+  44   intresMB.. inflow(res,'m1') + Initial - x(spill,m1) - x(hdpr,m1) =E= x(re
+****                       $120,340,149,171,148      $120,340,149,171,300
+      s,m1);
+  45   ResMB(t)$( ORD (t) ge 2).. x(res,t)=E= x(res,t-1) + Flowin(l,t)-x(spill,t
+****                                   $149,171    $149,171     $140,149      $1
+      )-x(hdpr,t) =E= x(res,t);
+      49,171  $149,300
+  46   RiverMB(l,t).. x(spill,t) + x(hdpr,t) =E= x(irr,time +x(At_a,t);
+****                         $149,171    $149,171    $120,340,149,171,120,300
+  47   Sustained.. x(res,m6) =G= initial;
+****                    $149,171,120,340,149,171
+  48   
+  49   
+  50   
+  51  * 5. DEFINE the MODEL from the EQUATIONS
+  52  MODEL Reservoir /ALL/;
+  53  * 6. SOLVE the MODEL
+  54   
+  55  SOLVE Reservoir USING LP MAXIMIZING totalBen;
+****                                              $257
+GAMS 24.2.3  r46072 Released May 22, 2014 WEX-WEI x86_64/MS Windows 09/29/20 19:15:51 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Error Messages
+
+
+  8  ')' expected
+120  Unknown identifier entered as set
+140  Unknown symbol
+148  Dimension different - The symbol is referenced with more/less
+        indices as declared
+149  Uncontrolled set entered as constant
+171  Domain violation for set
+257  Solve statement not checked because of previous errors
+300  Remaining errors not printed for this line
+340  A label/element with the same name exist. You may have forgotten
+        to quote a label/element reference. For example,
+        set i / a,b,c /; parameter x(i); x('a') = 10;
+409  Unrecognizable item - skip to find a new statement
+       looking for a ';' or a key word to get started again
+
+**** 61 ERROR(S)   0 WARNING(S)
+
+
+COMPILATION TIME     =        0.094 SECONDS      3 MB  24.2.3 r46072 WEX-WEI
+
+
+USER: Utah Water Research Laboratory (5 user)        G140130:1517AV-GEN
+      Utah State University                                      DC7087
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE54
+           10-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reserv
+           oir Problem.gms
+Output     C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2020\CEE6410-Rosenberg-GitH
+           ub\CEE-6410-Rosenberg\Lectures\Reservoir Problem.lst
+
+**** USER ERROR(S) ENCOUNTERED

@@ -1,0 +1,41 @@
+
+--- Job HW03_GAMS_Goodrum.gms Start 09/26/20 18:17:24 24.2.3 r46072 WEX-WEI x86_64/MS Windows
+GAMS 24.2.3   Copyright (C) 1987-2014 GAMS Development. All rights reserved
+Licensee: Utah Water Research Laboratory (5 user)        G140130:1517AV-GEN
+          Utah State University                                      DC7087
+          License for teaching and research at degree granting institutions
+--- Starting compilation
+--- HW03_GAMS_Goodrum.gms(90) 3 Mb
+--- Starting execution: elapsed 0:00:00.003
+--- Generating LP model PLANTING
+--- HW03_GAMS_Goodrum.gms(86) 4 Mb
+---   5 rows  3 columns  10 non-zeroes
+--- Executing CPLEX: elapsed 0:00:00.021
+
+IBM ILOG CPLEX   24.2.3 r46072 Released May 22, 2014 WEI x86_64/MS Windows    
+Cplex 12.6.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+Tried aggregator 1 time.
+LP Presolve eliminated 2 rows and 1 columns.
+Reduced LP has 3 rows, 2 columns, and 6 nonzeros.
+Presolve time = 0.00 sec. (0.00 ticks)
+
+Iteration      Dual Objective            In Variable           Out Variable
+     1  I            0.000000               X(Grain)  CONSTRAIN(July) slack
+     2         1213333.333333                 X(Hay)  CONSTRAIN(June) slack
+     3         1160000.000000  CONSTRAIN(June) slackCONSTRAIN(Acreage slack
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.01 ticks)
+
+Optimal solution found.
+Objective :     1160000.000000
+
+--- Restarting execution
+--- HW03_GAMS_Goodrum.gms(86) 2 Mb
+--- Reading solution for model PLANTING
+*** Status: Normal completion
+--- Job HW03_GAMS_Goodrum.gms Stop 09/26/20 18:17:25 elapsed 0:00:00.107

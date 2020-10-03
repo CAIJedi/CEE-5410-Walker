@@ -1,0 +1,42 @@
+
+--- Job Ex2-3.gms Start 09/26/20 18:26:48 24.2.3 r46072 WEX-WEI x86_64/MS Windows
+GAMS 24.2.3   Copyright (C) 1987-2014 GAMS Development. All rights reserved
+Licensee: Utah Water Research Laboratory (5 user)        G140130:1517AV-GEN
+          Utah State University                                      DC7087
+          License for teaching and research at degree granting institutions
+--- Starting compilation
+--- Ex2-3.gms(72) 3 Mb
+--- Starting execution: elapsed 0:00:00.003
+--- Ex2-3.gms(65) 4 Mb
+--- Generating LP model Benefit
+--- Ex2-3.gms(69) 4 Mb
+---   5 rows  3 columns  10 non-zeroes
+--- Executing CONOPT: elapsed 0:00:00.016
+CONOPT 3         24.2.3 r46072 Released May 22, 2014 WEI x86_64/MS Windows    
+ 
+ 
+    C O N O P T 3   version 3.15P
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        0.0000000000E+00 (Input point)
+                                Pre-triangular equations:        0
+                                Post-triangular equations:       1
+      1   0        0.0000000000E+00 (After pre-processing)
+      2   0        0.0000000000E+00 (After scaling)
+ 
+ ** Feasible solution. Value of objective =    0.00000000000
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+      5   3        1.1600000000E+06 0.0E+00     0
+ 
+ ** Optimal solution. There are no superbasic variables.
+ 
+--- Restarting execution
+--- Ex2-3.gms(69) 2 Mb
+--- Reading solution for model Benefit
+*** Status: Normal completion
+--- Job Ex2-3.gms Stop 09/26/20 18:26:49 elapsed 0:00:00.194

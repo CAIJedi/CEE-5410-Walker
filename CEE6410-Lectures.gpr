@@ -1,0 +1,155 @@
+[PROJECT]
+
+[RP:JUNE_NEWOBJ]
+1=
+
+[RP:EX2-1]
+1=
+
+[RP:HW7SANDERS]
+1=
+
+[RP:HW7 RESERVOIR]
+1=
+
+[RP:HW7-MONTECARLO]
+1=
+
+[RP:HW4-RESERVOIROPS]
+1=
+
+[RP:UNTITLED_1]
+1=
+
+[GDXDISP: DecVars Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+Order=2,1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: A Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+Order=2,1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: b Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ObjFunc Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: PROFIT Equ 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: VPROFIT Var 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: X Var 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[RP:EX2-1-LABOR]
+1=
+
+[GDXDISP: c Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[RP:HW4_3_MRA]
+1=
+
+[RP:EX7-1]
+1=
+
+[RP:EX2-1-PARAMETRIC]
+1=
+
+[RP:EX6-3-RELAXED]
+1=
+
+[RP:EX6-3-INTEGER]
+1=
+
+[RP:HW03_GAMS_GOODRUM]
+1=
+
+[RP:AVEEKMAHMUD_LATE_1625010_78530655_HW3_MRA]
+1=
+
+[RP:EX2-3]
+1=
+
+[RP:JTW_HW3]
+1=
+
+[RP:RESERVOIR PROBLEM]
+1=
+
+[RP:RESERVOIR PROBLEM-ANDERSON]
+1=
+
+[RP:EX2-1DUAL]
+1=
+
+[RP:AVEEKMAHMUD_1625010_78531055_HW4_4_MRA]
+1=
+
+[MRUFILES]
+1=C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2020\CEE6410-Rosenberg-GitHub\CEE-6410-Rosenberg\Lectures\Reservoir Problem.lst
+2=C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2020\StudentWork\HW4\Submitted\aveekmahmud_1625010_78531055_HW4_4_MRA.gms
+3=C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2020\CEE6410-Rosenberg-GitHub\CEE-6410-Rosenberg\Lectures\Ex2-1Dual.gms
+4=C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2020\CEE6410-Rosenberg-GitHub\CEE-6410-Rosenberg\Lectures\cplex.opt
+5=C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2020\CEE6410-Rosenberg-GitHub\CEE-6410-Rosenberg\Lectures\aveekmahmud_1625010_78531055_HW4_4_MRA.lst
+6=C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2020\StudentWork\HW4\Submitted\Reservoir Problem-Anderson.gms
+7=C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+8=C:\Users\david\AppData\Local\Temp\Temp1_JTW_CEE5410_Repo-master.zip\JTW_CEE5410_Repo-master\HW3 Excel_Gams\JTW_HW3.gms
+9=C:\Users\david\AppData\Local\Temp\Temp1_Rind-master.zip\Rind-master\Homework_3\Ex2-3.gms
+
+[OPENWINDOW_1]
+FILE0=C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2018\Lectures\GAMSexamples\Ex7-1.gms
+FILE1=C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2020\CEE6410-Rosenberg-GitHub\CEE-6410-Rosenberg\Lectures\Ex2-1Dual.lst
+FILE2=C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2020\CEE6410-Rosenberg-GitHub\CEE-6410-Rosenberg\Lectures\Ex2-3.lst
+FILE3=C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2020\CEE6410-Rosenberg-GitHub\CEE-6410-Rosenberg\Lectures\Ex6-3-integer.gms
+FILE4=C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2020\CEE6410-Rosenberg-GitHub\CEE-6410-Rosenberg\Lectures\Ex6-3-integer.lst
+FILE5=C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2020\CEE6410-Rosenberg-GitHub\CEE-6410-Rosenberg\Lectures\Ex6-3-relaxed.gms
+FILE6=C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2020\CEE6410-Rosenberg-GitHub\CEE-6410-Rosenberg\Lectures\Ex6-3-relaxed.lst
+FILE7=C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2020\Homework\HW5-Ex7-1.gms
+FILE8=C:\Rosenberg\Work\USU\Classes\CEE6410\Fall2020\Homework\HW5-Ex7-1.gms
+MAXIM=1
+TOP=130
+LEFT=50
+HEIGHT=400
+WIDTH=400

@@ -1,0 +1,21 @@
+B 2 C o m p i l a t i o n
+B 88 Equation Listing    SOLVE Benefit Using LP From line 69
+D 89 Max_benefit
+D 96 Land_Constraint
+D 101 Water_June
+D 106 Water_July
+D 111 Water_August
+B 118 Column Listing      SOLVE Benefit Using LP From line 69
+E 119 X_Hay
+E 131 X_Grain
+E 141 Max_Z
+B 151 Model Statistics    SOLVE Benefit Using LP From line 69
+B 167 Solution Report     SOLVE Benefit Using LP From line 69
+F 201 Max_benefit
+F 202 Land_Constraint
+F 203 Water_June
+F 204 Water_July
+F 205 Water_August
+G 213 X_Hay
+G 217 X_Grain
+G 218 Max_Z

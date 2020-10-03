@@ -1,0 +1,99 @@
+
+--- Job Reservoir Problem.gms Start 09/29/20 19:15:51 24.2.3 r46072 WEX-WEI x86_64/MS Windows
+GAMS 24.2.3   Copyright (C) 1987-2014 GAMS Development. All rights reserved
+Licensee: Utah Water Research Laboratory (5 user)        G140130:1517AV-GEN
+          Utah State University                                      DC7087
+          License for teaching and research at degree granting institutions
+--- Starting compilation
+--- Reservoir Problem.gms(44) 3 Mb 24 Errors
+*** Error 120 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Unknown identifier entered as set
+*** Error 340 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    A label/element with the same name exist. You may have forgotten
+       to quote a label/element reference. For example,
+       set i / a,b,c /; parameter x(i); x('a') = 10;
+*** Error 149 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Uncontrolled set entered as constant
+*** Error 171 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Domain violation for set
+*** Error 148 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Dimension different - The symbol is referenced with more/less
+       indices as declared
+*** Error 120 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Unknown identifier entered as set
+*** Error 340 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    A label/element with the same name exist. You may have forgotten
+       to quote a label/element reference. For example,
+       set i / a,b,c /; parameter x(i); x('a') = 10;
+*** Error 149 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Uncontrolled set entered as constant
+*** Error 171 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Domain violation for set
+*** Error 300 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Remaining errors not printed for this line
+--- Reservoir Problem.gms(45) 3 Mb 36 Errors
+*** Error 149 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Uncontrolled set entered as constant
+*** Error 171 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Domain violation for set
+*** Error 149 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Uncontrolled set entered as constant
+*** Error 171 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Domain violation for set
+*** Error 140 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Unknown symbol
+*** Error 149 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Uncontrolled set entered as constant
+*** Error 149 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Uncontrolled set entered as constant
+*** Error 171 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Domain violation for set
+*** Error 149 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Uncontrolled set entered as constant
+*** Error 300 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Remaining errors not printed for this line
+--- Reservoir Problem.gms(46) 3 Mb 54 Errors
+*** Error 149 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Uncontrolled set entered as constant
+*** Error 171 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Domain violation for set
+*** Error 149 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Uncontrolled set entered as constant
+*** Error 171 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Domain violation for set
+*** Error 120 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Unknown identifier entered as set
+*** Error 340 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    A label/element with the same name exist. You may have forgotten
+       to quote a label/element reference. For example,
+       set i / a,b,c /; parameter x(i); x('a') = 10;
+*** Error 149 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Uncontrolled set entered as constant
+*** Error 171 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Domain violation for set
+*** Error 120 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Unknown identifier entered as set
+*** Error 300 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Remaining errors not printed for this line
+--- Reservoir Problem.gms(47) 3 Mb 60 Errors
+*** Error 149 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Uncontrolled set entered as constant
+*** Error 171 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Domain violation for set
+*** Error 120 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Unknown identifier entered as set
+*** Error 340 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    A label/element with the same name exist. You may have forgotten
+       to quote a label/element reference. For example,
+       set i / a,b,c /; parameter x(i); x('a') = 10;
+*** Error 149 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Uncontrolled set entered as constant
+*** Error 171 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Domain violation for set
+--- Reservoir Problem.gms(55) 3 Mb 61 Errors
+*** Error 257 in C:\Users\david\AppData\Local\Temp\Temp1_HW4-Reservoir-Operation-CEE5410-master.zip\HW4-Reservoir-Operation-CEE5410-master\workspace\Reservoir Problem.gms
+    Solve statement not checked because of previous errors
+--- Reservoir Problem.gms(55) 3 Mb 61 Errors
+*** Status: Compilation error(s)
+--- Job Reservoir Problem.gms Stop 09/29/20 19:15:51 elapsed 0:00:00.132
+Exit code = 2
