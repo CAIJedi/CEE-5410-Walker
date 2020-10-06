@@ -50,7 +50,7 @@ X.LO(i) = -3;
 X.UP(i) = 3;
 
 *Direction to the solver to specify the initial variable value levels (initial start point)
-X.L("x") = -2;
+X.L("x") = 0;
 X.L("y") = -2;
 
 *Save the starting point so we can see it at the end with the solution

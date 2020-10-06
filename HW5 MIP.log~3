@@ -1,0 +1,27 @@
+--- Job HW5 MIP.gms Start 10/05/20 18:47:47 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input "C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\HW5 MIP.gms"
+    PageSize 0
+    ScrDir C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     G200622/0001AP-GEN
+          Utah State University, Utah Water Research Laboratory      DC7087
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- HW5 MIP.gms(44) 3 Mb 1 Error
+*** Error   8 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\HW5 MIP.gms
+    ')' expected
+--- HW5 MIP.gms(54) 3 Mb 2 Errors
+*** Error 257 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\HW5 MIP.gms
+    Solve statement not checked because of previous errors
+--- HW5 MIP.gms(54) 3 Mb 2 Errors
+*** Status: Compilation error(s)
+--- Job HW5 MIP.gms Stop 10/05/20 18:47:47 elapsed 0:00:00.050

@@ -1,0 +1,31 @@
+B 3 C o m p i l a t i o n
+B 63 Equation Listing    SOLVE Farmer Using MIP From line 54
+D 66 BENIFIT
+D 71 ResStor
+D 78 Massbalance1
+D 83 Massbalance2
+D 88 AreaIrr
+D 95 BuildRes
+D 100 PCap
+D 107 RiverMass
+B 115 Column Listing      SOLVE Farmer Using MIP From line 54
+E 118 I
+E 139 P
+E 146 A
+E 155 X
+E 177 Nbenifit
+B 185 Model Statistics    SOLVE Farmer Using MIP From line 54
+B 198 Solution Report     SOLVE Farmer Using MIP From line 54
+F 237 BENIFIT
+F 241 ResStor
+F 250 Massbalance1
+F 251 Massbalance2
+F 256 AreaIrr
+F 265 BuildRes
+F 269 PCap
+F 276 RiverMass
+G 283 I
+G 293 P
+G 294 A
+G 299 X
+G 314 Nbenifit

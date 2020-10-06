@@ -1,4 +1,4 @@
---- Job ExChevyFunction.gms Start 10/05/20 11:11:41 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Job ExChevyFunction.gms Start 10/05/20 11:08:39 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\32\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -17,14 +17,14 @@ Licensee: Small MUD - 5 User License                     G200622/0001AP-GEN
           C:\GAMS\32\gamslice.txt
 --- Starting compilation
 --- ExChevyFunction.gms(62) 3 Mb
---- Starting execution: elapsed 0:00:00.023
+--- Starting execution: elapsed 0:00:00.048
 --- ExChevyFunction.gms(57) 4 Mb
 --- Generating NLP model ChevyModel
 --- ExChevyFunction.gms(60) 6 Mb
 ---   1 rows  3 columns  3 non-zeroes
 ---   48 nl-code  2 nl-non-zeroes
 --- ExChevyFunction.gms(60) 4 Mb
---- Executing CONOPT (Solvelink=2): elapsed 0:00:00.070
+--- Executing CONOPT (Solvelink=2): elapsed 0:00:00.095
 CONOPT 3         32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
  
  
@@ -35,7 +35,7 @@ CONOPT 3         32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
  
  
    Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
-      0   0        4.7596121032E+00 (Input point)
+      0   0        1.3196661671E-03 (Input point)
  
                    Pre-triangular equations:   0
                    Post-triangular equations:  1
@@ -43,15 +43,15 @@ CONOPT 3         32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
       1   0        0.0000000000E+00 (After pre-processing)
       2   0        0.0000000000E+00 (After scaling)
  
- ** Feasible solution. Value of objective =   -4.75961210321
+ ** Feasible solution. Value of objective =   1.319666167112E-03
  
    Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
-      5   3       -9.6030914335E-05 0.0E+00     0
+     11   4        8.1061434261E+00 7.6E-10     2
  
- ** Optimal solution. There are no superbasic variables.
+ ** Optimal solution. Reduced gradient less than tolerance.
  
 --- Reading solution for model ChevyModel
---- Executing after solve: elapsed 0:00:00.162
+--- Executing after solve: elapsed 0:00:00.775
 --- ExChevyFunction.gms(62) 4 Mb
 *** Status: Normal completion
---- Job ExChevyFunction.gms Stop 10/05/20 11:11:42 elapsed 0:00:00.197
+--- Job ExChevyFunction.gms Stop 10/05/20 11:08:40 elapsed 0:00:00.791
