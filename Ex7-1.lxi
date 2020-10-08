@@ -1,0 +1,35 @@
+B 2 C o m p i l a t i o n
+B 166 Equation Listing    SOLVE ResDesign Using MIP From line 118
+D 167 NetBen
+D 176 AreaToSupply
+D 185 PumpCapacity
+D 193 ResCapacity
+D 205 MutExclus
+D 212 RivMassBal
+D 220 ResMassBal
+B 233 Column Listing      SOLVE ResDesign Using MIP From line 118
+E 234 I
+E 257 X
+E 278 REL
+E 291 STOR
+E 305 AREA
+E 314 TBEN
+B 324 Model Statistics    SOLVE ResDesign Using MIP From line 118
+B 340 Solution Report     SOLVE ResDesign Using MIP From line 118
+F 378 NetBen
+F 387 AreaToSupply
+F 395 PumpCapacity
+F 403 ResCapacity
+F 410 MutExclus
+F 418 RivMassBal
+F 425 ResMassBal
+G 427 I
+G 438 X
+G 447 REL
+G 454 STOR
+G 461 AREA
+G 465 TBEN
+B 477 E x e c u t i o n
+I 478 X
+I 488 I
+I 498 TBEN
