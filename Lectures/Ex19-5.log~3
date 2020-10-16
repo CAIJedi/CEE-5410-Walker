@@ -1,0 +1,156 @@
+--- Job Ex19-5.gms Start 10/14/20 11:16:27 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Lectures\Ex19-5.gms
+    PageSize 0
+    ScrDir C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Lectures\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     G200622/0001AP-GEN
+          Utah State University, Utah Water Research Laboratory      DC7087
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- Ex19-5.gms(180) 3 Mb
+--- Starting execution: elapsed 0:00:00.021
+--- Ex19-5.gms(124) 4 Mb
+--- Generating LP model ExtremePt
+--- Ex19-5.gms(127) 4 Mb
+---   12 rows  11 columns  25 non-zeroes
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:00.060
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+Tried aggregator 1 time.
+LP Presolve eliminated 12 rows and 11 columns.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.01 ticks)
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.01 ticks)
+
+Optimal solution found.
+Objective :          69.500000
+
+--- Reading solution for model ExtremePt
+--- Executing after solve: elapsed 0:00:00.180
+--- Ex19-5.gms(135) 4 Mb
+--- Generating LP model ExtremePt
+--- Ex19-5.gms(144) 4 Mb
+--- LOOPS f2 = hyd
+---   12 rows  11 columns  24 non-zeroes
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:00.228
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Simplex_Display                         2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+Tried aggregator 1 time.
+LP Presolve eliminated 12 rows and 11 columns.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.01 ticks)
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.01 ticks)
+
+Optimal solution found.
+Objective :          45.000000
+
+--- Reading solution for model ExtremePt
+--- Executing after solve: elapsed 0:00:00.320
+--- Ex19-5.gms(135) 4 Mb
+--- Generating LP model ExtremePt
+--- Ex19-5.gms(144) 4 Mb
+--- LOOPS f2 = irr
+---   12 rows  11 columns  24 non-zeroes
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:00.346
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Simplex_Display                         2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+Tried aggregator 1 time.
+LP Presolve eliminated 12 rows and 11 columns.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.01 ticks)
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.01 ticks)
+
+Optimal solution found.
+Objective :          56.000000
+
+--- Reading solution for model ExtremePt
+--- Executing after solve: elapsed 0:00:00.423
+--- Ex19-5.gms(163) 4 Mb
+--- Generating LP model ObjAsConstraint
+--- Ex19-5.gms(172) 4 Mb
+---   13 rows  11 columns  25 non-zeroes
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:00.480
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Simplex_Display                         2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+Tried aggregator 1 time.
+LP Presolve eliminated 9 rows and 7 columns.
+Aggregator did 4 substitutions.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.01 ticks)
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.01 ticks)
+
+Optimal solution found.
+Objective :          27.285714
+
+--- Reading solution for model ObjAsConstraint
+--- Executing after solve: elapsed 0:00:00.580
+--- Ex19-5.gms(177) 4 Mb
+--- GDX File C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Lectures\Ex19-5.gdx
+--- Ex19-5.gms(179) 4 Mb
+GDX2XLS          32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+Output file: C:\Users\oboem\Documents\GitHub\CEE
+Output file: C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Lectures\Ex19-5.xlsx
+(Created backup file)
+*** Status: Normal completion
+--- Job Ex19-5.gms Stop 10/14/20 11:16:32 elapsed 0:00:04.673
