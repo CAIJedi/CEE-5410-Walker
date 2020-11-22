@@ -1,0 +1,51 @@
+--- Job HW4-MonteCarlo.gms Start 10/31/20 15:20:22 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Lectures\HW4-MonteCarlo.gms
+    PageSize 0
+    ScrDir C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Lectures\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     G200622/0001AP-GEN
+          Utah State University, Utah Water Research Laboratory      DC7087
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- HW4-MonteCarlo.gms(67) 3 Mb 7 Errors
+*** Error 185 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Lectures\HW4-MonteCarlo.gms
+    Set identifier or '*' expected
+*** Error 120 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Lectures\HW4-MonteCarlo.gms
+    Unknown identifier entered as set
+*** Error 184 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Lectures\HW4-MonteCarlo.gms
+    Domain list redefined
+*** Error  10 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Lectures\HW4-MonteCarlo.gms
+    ',' expected
+*** Error 185 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Lectures\HW4-MonteCarlo.gms
+    Set identifier or '*' expected
+*** Error  96 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Lectures\HW4-MonteCarlo.gms
+    Blank needed between identifier and text
+      (-or- illegal character in identifier)
+      (-or- check for missing ';' on previous line)
+*** Error   2 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Lectures\HW4-MonteCarlo.gms
+    Identifier expected
+--- HW4-MonteCarlo.gms(108) 3 Mb 8 Errors
+*** Error 257 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Lectures\HW4-MonteCarlo.gms
+    Solve statement not checked because of previous errors
+--- HW4-MonteCarlo.gms(218) 3 Mb 9 Errors
+*** Error 257 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Lectures\HW4-MonteCarlo.gms
+    Solve statement not checked because of previous errors
+--- HW4-MonteCarlo.gms(221) 3 Mb 10 Errors
+*** Error 141 in C:\Users\oboem\Documents\GitHub\CEE-5410-Walker\Lectures\HW4-MonteCarlo.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- HW4-MonteCarlo.gms(232) 3 Mb 10 Errors
+*** Status: Compilation error(s)
+--- Job HW4-MonteCarlo.gms Stop 10/31/20 15:20:22 elapsed 0:00:00.018

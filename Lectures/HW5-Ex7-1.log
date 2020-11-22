@@ -1,0 +1,107 @@
+
+--- Job HW5-Ex7-1.gms Start 10/14/20 15:10:00 24.2.3 r46072 WEX-WEI x86_64/MS Windows
+GAMS 24.2.3   Copyright (C) 1987-2014 GAMS Development. All rights reserved
+Licensee: Utah Water Research Laboratory (5 user)        G140130:1517AV-GEN
+          Utah State University                                      DC7087
+          License for teaching and research at degree granting institutions
+--- Starting compilation
+--- HW5-Ex7-1.gms(125) 3 Mb
+--- Starting execution: elapsed 0:00:00.003
+--- HW5-Ex7-1.gms(82) 4 Mb
+--- Generating MIP model ResDesign
+--- HW5-Ex7-1.gms(118) 4 Mb
+---   13 rows  16 columns  42 non-zeroes
+---   6 discrete-columns
+--- Executing CPLEX: elapsed 0:00:00.023
+
+IBM ILOG CPLEX   24.2.3 r46072 Released May 22, 2014 WEI x86_64/MS Windows    
+Cplex 12.6.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+Found incumbent of value 0.000000 after 0.01 sec. (0.00 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2 rows and 4 columns.
+Reduced MIP has 11 rows, 12 columns, and 31 nonzeros.
+Reduced MIP has 3 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (0.02 ticks)
+Probing fixed 0 vars, tightened 7 bounds.
+Probing time = 0.00 sec. (0.01 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 11 rows, 12 columns, and 31 nonzeros.
+Reduced MIP has 3 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.02 ticks)
+Probing time = 0.00 sec. (0.00 ticks)
+Clique table members: 1.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Tried aggregator 1 time.
+No LP presolve or aggregator reductions.
+Presolve time = 0.01 sec. (0.00 ticks)
+Initializing dual steep norms . . .
+
+Iteration      Dual Objective            In Variable           Out Variable
+     1          122120.000000              X(pum.s2) AreaToSupply(s2) slack
+     2          122120.000000               STOR(s1)                REL(s2)
+     3          122120.000000                REL(s2)   RivMassBal(s2) slack
+     4          119200.000000                   AREA               STOR(s1)
+     5          107736.666667            I(res.lev2) AreaToSupply(s1) slack
+     6          107423.809524              X(pum.s1)   RivMassBal(s1) slack
+     7          104295.238095   RivMassBal(s1) slack PumpCapacity(s1) slack
+     8          100151.082251            I(pum.lev1) PumpCapacity(s2) slack
+     9           98493.939394 PumpCapacity(s1) slack  ResCapacity(s1) slack
+Root relaxation solution time = 0.03 sec. (0.02 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            0.0000   130150.0000        9     --- 
+Found incumbent of value 0.000000 after 0.06 sec. (0.09 ticks)
+      0     0    98493.9394     1        0.0000    98493.9394        9     --- 
+*     0+    0                        97766.6667    98493.9394        9    0.74%
+Found incumbent of value 97766.666667 after 0.08 sec. (0.10 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.08 sec. (0.10 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.08 sec. (0.10 ticks)
+MIP status(102): integer optimal, tolerance
+Cplex Time: 0.08sec (det. 0.10 ticks)
+Fixing integer variables, and solving final LP...
+Tried aggregator 1 time.
+LP Presolve eliminated 7 rows and 7 columns.
+Reduced LP has 6 rows, 9 columns, and 17 nonzeros.
+Presolve time = 0.00 sec. (0.01 ticks)
+Initializing dual steep norms . . .
+
+Iteration      Dual Objective            In Variable           Out Variable
+     1  I          179.999998                   AREA AreaToSupply(s2) slack
+     2  I           99.999998              X(pum.s2)   RivMassBal(s2) slack
+     3  I            0.000000               STOR(s1)              X(res.s1)
+     4          110407.500000              X(res.s1) AreaToSupply(s1) slack
+     5           97766.666667              X(pum.s1)               STOR(s1)
+Fixed MIP status(1): optimal
+Cplex Time: 0.00sec (det. 0.02 ticks)
+
+Solution satisfies tolerances.
+
+MIP Solution:        97766.666667    (9 iterations, 0 nodes)
+Final Solve:         97766.666667    (5 iterations)
+
+Best possible:       98493.939394
+Absolute gap:          727.272727
+Relative gap:            0.007439
+
+--- Restarting execution
+--- HW5-Ex7-1.gms(118) 2 Mb
+--- Reading solution for model ResDesign
+--- Executing after solve: elapsed 0:00:00.204
+--- HW5-Ex7-1.gms(125) 3 Mb
+GDX2XLS          24.2.3 r46072 Released May 22, 2014 VS8 x86/MS Windows       
+*** Status: Normal completion
+--- Job HW5-Ex7-1.gms Stop 10/14/20 15:10:04 elapsed 0:00:03.938
